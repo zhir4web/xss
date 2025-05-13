@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block content %}
+<section class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">About This Project</h1>
+    <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+        Hello! My name is <strong>Zhir</strong>, and this blog is part of my college project to learn and demonstrate web development using modern tools like Django and Tailwind CSS.
+    </p>
+    <p class="text-gray-700 dark:text-gray-300 mb-4">
+        The goal of this project is to create a simple, clean blog where users can view a list of posts, read individual entries, and navigate between pages such as Home, About, and Posts.
+    </p>
+    <p class="text-gray-700 dark:text-gray-300 mb-4">
+        On the backend, it uses <strong>Django</strong>, a powerful Python web framework. On the frontend, it's styled with <strong>Tailwind CSS</strong> to make it look modern and responsive.
+    </p>
+    <p class="text-gray-700 dark:text-gray-300 mb-6">
+        You can explore more by visiting the <a href="/" class="text-blue-600 hover:underline dark:text-blue-400">Home</a> page or browsing through the <a href="{% url 'posts:list' %}" class="text-blue-600 hover:underline dark:text-blue-400">Posts</a>.
+    </p>
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+        Thanks for visiting! – Zhir
+    </p>
+</section>
+{% endblock %}

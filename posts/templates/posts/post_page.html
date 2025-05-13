@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto my-8 px-4">
+        <!-- Post Header Section -->
+        <section class="mb-8 text-center">
+            <h1 class="text-4xl font-bold text-gray-800 dark:text-white">{{ post.title }}</h1>
+            <p class="text-lg text-gray-500 dark:text-gray-400">{{ post.date|date:"F j, Y" }}</p>
+        </section>
+
+        <!-- Post Body Section -->
+        <section class="bg-white shadow-lg rounded-lg overflow-hidden mb-12 dark:bg-gray-800 dark:text-gray-200">
+            <div class="p-8">
+                <!-- Post Content -->
+                <div class="text-gray-800 dark:text-gray-200 leading-relaxed">
+                    <p class="mb-6">{{ post.body }}</p>
+                </div>
+
+                <!-- Back to Posts Link -->
+                <div class="flex justify-between items-center text-sm text-gray-600 dark:text-gray-400">
+                    <a href="{% url 'posts:list' %}" class="text-blue-600 dark:text-blue-400 hover:underline">Back to Posts</a>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
